@@ -40,6 +40,9 @@
   #define Y_SERIAL_TX_PIN                  PC6
   #define Y_SERIAL_RX_PIN                  PC6
 
+  #define Y2_SERIAL_TX_PIN                 PC11
+  #define Y2_SERIAL_RX_PIN                 PC11
+  
   #define Z_SERIAL_TX_PIN                  PC10
   #define Z_SERIAL_RX_PIN                  PC10
 

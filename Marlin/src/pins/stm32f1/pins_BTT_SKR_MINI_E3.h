@@ -72,13 +72,19 @@
 #define Y_STEP_PIN                          PB10
 #define Y_DIR_PIN                           PB2
 
+// CHF added 2020-06-10
+#define Y2_ENABLE_PIN      PD2
+#define Y2_STEP_PIN        PB3
+#define Y2_DIR_PIN         PB4
+
 #define Z_ENABLE_PIN                        PB1
 #define Z_STEP_PIN                          PB0
 #define Z_DIR_PIN                           PC5
 
-#define E0_ENABLE_PIN                       PD2
-#define E0_STEP_PIN                         PB3
-#define E0_DIR_PIN                          PB4
+// CHF mod 2020-06-14
+#define E0_ENABLE_PIN                       PC9 // PD2 - Bed
+#define E0_STEP_PIN                         PC9 // PB3 - Bed
+#define E0_DIR_PIN                          PC9 // PB4 - Bed
 
 //
 // Temperature Sensors
