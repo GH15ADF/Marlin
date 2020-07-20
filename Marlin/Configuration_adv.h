@@ -591,11 +591,18 @@
 // @section homing
 
 // Homing hits each endstop, retracts by these distances, then does a slower bump.
-#define X_HOME_BUMP_MM 5
-#define Y_HOME_BUMP_MM 5
-#define Z_HOME_BUMP_MM 2
+//
+// Changed for sensorless homing as per 
+// BigTreeTech SKR Mini - Complete Marlin Config - Chris's Basement (11:57)
+// https://www.youtube.com/watch?v=ACkxT2uvYO4
+//
+// Jumpers for board are in https://raw.githubusercontent.com/morningreis/Marlin-SKR-E3-Mini-1.2/bugfix-2.0.x/SKR_E3_Mini_1.2_wiring.png
+// 
+#define X_HOME_BUMP_MM 0 //5
+#define Y_HOME_BUMP_MM 0 //5
+#define Z_HOME_BUMP_MM 0 //2
 #define HOMING_BUMP_DIVISOR { 2, 2, 4 }  // Re-Bump Speed Divisor (Divides the Homing Feedrate)
-//#define QUICK_HOME                     // If homing includes X and Y, do a diagonal move initially
+#define QUICK_HOME                     // If homing includes X and Y, do a diagonal move initially
 //#define HOMING_BACKOFF_MM { 2, 2, 2 }  // (mm) Move away from the endstops after homing
 
 // When G28 is called, this option will make Y home before X
@@ -2324,7 +2331,7 @@
    * IMPROVE_HOMING_RELIABILITY tunes acceleration and jerk when
    * homing and adds a guard period for endstop triggering.
    */
-  //#define SENSORLESS_HOMING // StallGuard capable drivers only
+  #define SENSORLESS_HOMING // StallGuard capable drivers only
 
   #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
     // TMC2209: 0...255. TMC2130: -64...63
