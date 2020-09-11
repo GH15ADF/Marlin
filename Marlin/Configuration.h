@@ -1004,14 +1004,9 @@
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
 #define PROBING_MARGIN 15
 
-<<<<<<< Updated upstream
-// X and Y axis travel speed (mm/min) between probes
-#define XY_PROBE_SPEED (133*60)
-=======
 // X and Y axis travel speed (mm/m) between probes
 //https://3dprinting.stackexchange.com/questions/11684/how-do-i-speed-up-the-bltouch-auto-bed-leveling-in-th3ds-unified-firmware-u2-r
 #define XY_PROBE_SPEED 8000
->>>>>>> Stashed changes
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
@@ -1098,13 +1093,8 @@
 
 // @section extruder
 
-<<<<<<< Updated upstream
-#define DISABLE_E false             // Disable the extruder when not stepping
-#define DISABLE_INACTIVE_EXTRUDER   // Keep only the active extruder enabled
-=======
 #define DISABLE_E false             // For all extruders
 //#define DISABLE_INACTIVE_EXTRUDER   // Keep only the active extruder enabled
->>>>>>> Stashed changes
 
 // @section machine
 
@@ -1415,15 +1405,9 @@
   #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // Y point for Z homing
 #endif
 
-<<<<<<< Updated upstream
-// Homing speeds (mm/min)
-#define HOMING_FEEDRATE_XY (50*60)
-#define HOMING_FEEDRATE_Z  (4*60)
-=======
 // Homing speeds (mm/m)
 #define HOMING_FEEDRATE_XY (20*60)
 #define HOMING_FEEDRATE_Z  (20*60)
->>>>>>> Stashed changes
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
